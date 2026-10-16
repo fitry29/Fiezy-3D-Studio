@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+/* @import "tailwindcss";
+
+ :root {
+  --color-primary: #FFF9D2;
+  --color-secondary: #B4E1EB;
+  --color-third: #D46D25;
+
+  --font-dm: "DM Sans", sans-serif;
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+}
+
+@layer utilities {
+  .bg-primary { background-color: var(--color-primary); }
+  .bg-secondary { background-color: var(--color-secondary); }
+  .bg-third { background-color: var(--color-third); }
+
+  .text-primary { color: var(--color-primary); }
+  .text-secondary { color: var(--color-secondary); }
+  .text-third { color: var(--color-third); }
+
+  .border-primary { border-color: var(--color-primary); }
+  .border-secondary { border-color: var(--color-secondary); }
+  .border-third { border-color: var(--color-third); }
+
+  .font-dm { font-family: var(--font-dm); }
+  .font-bricolage { font-family: var(--font-bricolage); }
+} */
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FFF9D2;
+  --color-secondary: #eee9f7;
+  --color-third: #CFECF3;
+  --color-ink: #29263a;
+  --color-paper: #fbf8f1;
+  --color-coral: #f28a78;
+  --color-coral-deep: #df6c5d;
+  --color-lilac: #cbc1ee;
+  --color-mint: #b8ddcd;
+  --color-butter: #f4d987;
+  --color-yellow: #FACE68;
+
+  --font-dm: "DM Sans", sans-serif;
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+}
