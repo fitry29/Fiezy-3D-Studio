@@ -7,14 +7,6 @@ import printer from './assets/images/3dPrinter.jpg'
 
 import './App.css'
 
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M4 10h11M11 6l4 4-4 4" />
-    </svg>
-  );
-}
-
 const services = [
   {
     number: "01",
@@ -58,7 +50,7 @@ function App() {
         {/* ===== NAVBAR +  Hero ===== */}
         <div className="text-black h-full bg-gradient-to-br from-primary via-primary to-lilac">
           {/* === NAVBAR === */}
-          <nav className=" px-10">
+          <nav className=" px-0 lg:px-10">
             <div  className="grid content-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
               <div className="flex items-start justify-between h-16">
 
@@ -119,7 +111,7 @@ function App() {
 
                 {/* Menu Dropdown untuk Mobile */}
                 {isOpen && (
-                  <div className="md:hidden rounded-lg bg-white mt-4 p-3 space-y-1 shadow-lg">
+                  <div className="md:hidden flex flex-col rounded-lg bg-primary mt-4 p-3 space-y-1 shadow-2xl z-50">
                     {navLinks.map((link) => {
                       const isActive = activeTab === link.name;
                       return (
@@ -130,9 +122,9 @@ function App() {
                             setActiveTab(link.name);
                             setIsOpen(false);
                           }}
-                          className={`flex px-3.5 py-2.5 rounded-lg text-base font-medium transition-colors ${
+                          className={`flex px-3.5 py-2.5 text-base font-medium transition-colors ${
                             isActive
-                              ? 'bg-neutral-800 text-white font-semibold'
+                              ? 'border-b text-black font-semibold'
                               : 'text-neutral-500 hover:text-white hover:bg-neutral-800'
                           }`}
                         >
@@ -152,16 +144,16 @@ function App() {
             {/* HERO 1 */}
             <div className = "flex flex-col justify-center ">
               <p className="flex items-center gap-2 font-bricolage uppercase text-md text-neutral-500 tracking-wide"><span className="bg-coral-deep w-10 h-0.5 rounded-full"></span> Small things, big joy</p>
-              <h1 className ="font-bricolage font-bold text-7xl pt-5">
+              <h1 className ="font-bricolage font-bold lg:text-7xl text-6xl pt-5">
                 Ideas, made 
               </h1>
-              <h1 className="text-coral-deep font-bricolage font-bold text-7xl italic">touchable.</h1>
+              <h1 className="text-coral-deep font-bricolage font-bold lg:text-7xl text-5xl italic">touchable.</h1>
               <p className="font-dm text-lg pt-6 text-neutral-500 w-3/5">
                 We turn playful ideas into delightful 3D-printed objects—from satisfying clickers to custom keepsakes made just for you.
               </p>
-              <div className="flex items-center gap-5 pt-6">
-                <a className='flex items-center gap-3 text-black bg-coral-deep rounded-full px-4 py-4 font-medium tracking-wide hover:bg-coral' href = "#"><p>Explore our work</p> <i class="fa-solid fa-arrow-right"></i></a>
-                <a href = "#" className = "flex items-center text-black font-dm font-bold border-b-1 border-black">Have something in mind? </a>
+              <div className="flex flex-col items-start gap-5 pt-6">
+                <a className='flex items-center gap-3 text-black bg-coral-deep rounded-full px-4 py-4 font-medium tracking-wide hover:bg-coral' href = "#services"><p>Explore our work</p> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href = "#contact" className = "flex items-center text-black font-dm font-bold border-b-1 border-black">Have something in mind? </a>
               </div>
               <div>
                 <p className="font-dm text-sm font-bold pt-6 tracking-wide">
@@ -175,7 +167,7 @@ function App() {
 
             {/* Hero 2 */}
             <div className = "flex w-full py-20 px-0 justify-center xl:justify-end ">
-              <img src = {clicker3} alt="Clicker 3" className = "h-125 object-cover rounded-full shadow-xl"/>
+              <img src = {clicker3} alt="Clicker 3" className = "lg:h-125 h-90 object-cover rounded-3xl shadow-xl"/>
             </div>
           </div>  
 
@@ -219,8 +211,8 @@ function App() {
         {/* === Meet Us === */}
         <div id="about" className = "bg-third flex flex-col lg:flex-row gap-10 items-stretch justify-between align-center xl:px-45 px-6 py-8">
           {/* 1 */}
-          <div className = "flex w-full py-20 px-0 justify-center">
-            <img src = {printer} alt="Clicker 3" className = "h-180 object-cover rounded-4xl shadow-xl"/>
+          <div className = "flex w-full lg:py-20 py-10 px-0 justify-center">
+            <img src = {printer} alt="Clicker 3" className = "lg:h-180 h-90 object-cover rounded-4xl shadow-xl"/>
           </div>
           
           {/* 2 */}
@@ -241,10 +233,10 @@ function App() {
               <p className="font-dm text-md font-bold tracking-wide text-coral-deep mr-4">
                 01
               </p>
-              <p className="font-dm text-md font-bold tracking-wide text-black w-1/5">
+              <p className="font-dm text-md font-bold tracking-wide text-black lg:w-1/5 mr-4">
                 Personal
               </p>
-              <p className="font-dm text-md font-medium tracking-wide text-neutral-500 w-2/5">
+              <p className="font-dm text-md font-medium tracking-wide text-neutral-500 lg:w-2/5 ">
                 Made around your idea
               </p>
             </div>
@@ -253,10 +245,10 @@ function App() {
               <p className="font-dm text-md font-bold tracking-wide text-coral-deep mr-4">
                 02
               </p>
-              <p className="font-dm text-md font-bold tracking-wide text-black w-1/5">
+              <p className="font-dm text-md font-bold tracking-wide text-black lg:w-1/5 mr-4">
                 Considered
               </p>
-              <p className="font-dm text-md font-medium tracking-wide text-neutral-500 w-2/5">
+              <p className="font-dm text-md font-medium tracking-wide text-neutral-500 lg:w-2/5">
                 Refined in every detail
               </p>
             </div>
@@ -265,10 +257,10 @@ function App() {
               <p className="font-dm text-md font-bold tracking-wide text-coral-deep mr-4">
                 03
               </p>
-              <p className="font-dm text-md font-bold tracking-wide text-black w-1/5">
+              <p className="font-dm text-md font-bold tracking-wide text-black lg:w-1/5 mr-4">
                 Joyful
               </p>
-              <p className="font-dm text-md font-medium tracking-wide text-neutral-500 w-2/5">
+              <p className="font-dm text-md font-medium tracking-wide text-neutral-500 lg:w-2/5">
                 Made to make you smile
               </p>
             </div>
@@ -277,7 +269,7 @@ function App() {
         </div>
 
           {/* Contact */}
-        <div id="contact" className = "xl:px-45 px-6 py-20 bg-paper">
+        <div id="contact" className = "xl:px-45 px-1 py-20 bg-paper">
           <div className = "bg-linear-to-bl from-ink from-60%  via-yellow via-100% to-yellow to-90% rounded-3xl shadow-lg flex flex-col lg:flex-row gap-10 items-start justify-between align-center xl:px-25 xl:py-20 py-10 px-6">
             <div className = "flex flex-col item-center justify-center">
               <p className="flex items-center gap-2 font-bricolage uppercase text-sm font-bold text-neutral-300 tracking-wide"><span className="bg-coral-deep w-10 h-0.5 rounded-full"></span> Custom orders welcome</p>
