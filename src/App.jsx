@@ -12,25 +12,25 @@ const services = [
     number: "01",
     title: "Cute Clickers",
     text: "Our signature tactile treats—from name clickers to tiny sandwiches, burgers, and playful pocket companions.",
-    color: "coral",
+    color: "bg-coral",
   },
   {
     number: "02",
     title: "Action Figures",
     text: "Characters you love, brought to life as carefully printed display pieces with crisp, personality-filled details.",
-    color: "lilac",
+    color: "bg-lilac",
   },
   {
     number: "03",
     title: "Coasters & Keychains",
     text: "Useful little objects made joyful. Personalize a glass coaster or create a keychain that is distinctly yours.",
-    color: "mint",
+    color: "bg-mint",
   },
   {
     number: "04",
     title: "Custom Creations",
     text: "Have a sketch, idea, or reference? We turn your preferences into a tangible piece, made one layer at a time.",
-    color: "yellow",
+    color: "bg-yellow",
   },
 ];
 
@@ -48,7 +48,7 @@ function App() {
     <>
       <div className="min-h-screen text-ink flex flex-col">
         {/* ===== NAVBAR +  Hero ===== */}
-        <div className="text-black h-full bg-gradient-to-br from-primary via-primary to-lilac">
+        <div className="text-black h-full bg-linear-to-br from-primary via-primary to-lilac">
           {/* === NAVBAR === */}
           <nav className=" px-0 lg:px-10">
             <div  className="grid content-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
@@ -153,7 +153,7 @@ function App() {
               </p>
               <div className="flex flex-col items-start gap-5 pt-6">
                 <a className='flex items-center gap-3 text-black bg-coral-deep rounded-full px-4 py-4 font-medium tracking-wide hover:bg-coral' href = "#services"><p>Explore our work</p> <i class="fa-solid fa-arrow-right"></i></a>
-                <a href = "#contact" className = "flex items-center text-black font-dm font-bold border-b-1 border-black">Have something in mind? </a>
+                <a href = "#contact" className = "flex items-center text-black font-dm font-bold border-b border-black">Have something in mind? </a>
               </div>
               <div>
                 <p className="font-dm text-sm font-bold pt-6 tracking-wide">
@@ -195,7 +195,7 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10">
             {services.map((service) => (
-              <article className={`bg-${service.color} px-6 py-8 rounded-4xl flex flex-col shadow-lg justify-between`} key={service.title}>
+              <article className={`${service.color} px-6 py-8 rounded-4xl flex flex-col shadow-lg justify-between`} key={service.title}>
                 <span className="font-dm font-bold text-neutral-500 text-sm mb-5">{service.number}</span>
                 <span className='mb-5'><i class="fa-solid fa-cubes"></i></span>
                 <h3 className="font-bricolage font-bold text-4xl mb-7">{service.title}</h3>
@@ -316,7 +316,7 @@ function App() {
           
         </div>
 
-        <footer className = "border-t-1 border-neutral-300 bg-paper grid grid-cols-4 items-center justify-start py-10 lg:px-50 px-5">
+        <footer className = "border-t border-neutral-300 bg-paper grid grid-cols-4 items-center justify-start py-10 lg:px-50 px-5">
           <div className="flex items-center h-full">
             <a                 
               href="#home" 
